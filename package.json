@@ -1,11 +1,19 @@
 {
-  "name": "cat-ui",
+  "name": "@caveshao/cat-ui",
   "version": "0.1.0",
-  "private": true,
+  "description": "Vue.js 2.0 UI 6组件库",
+  "main": "lib/catcolor.umd.min.js",
+  "keywords": [
+    "UI toolKit",
+    "组件库",
+    "UI library"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name catcolor --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -19,6 +27,22 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caveshao/cat-ui.git"
+  },
+  "author": "caveshao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caveshao/cat-ui/issues"
+  },
+  "homepage": "https://github.com/caveshao/cat-ui#readme"
 }
