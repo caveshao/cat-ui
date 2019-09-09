@@ -12,7 +12,7 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@caveshao/cat-ui": "^0.1.0",
+    "@caveshao/cat-ui": "^0.1.1",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.1.1",
     "@vue/cli-service": "^3.1.1",

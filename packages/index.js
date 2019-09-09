@@ -1,24 +1,32 @@
 // 导入颜色选择器组件
-import colorPicker from './color-picker'
+import ColorPicker from './color-picker'
+import Button from './button'
+import Alert from './alert'
 
 
 //存储组件列表
 const components = [
-  colorPicker
+  ColorPicker,
+  Button,
+  Alert
 ]
 
-
+// Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器
+// 当调用 Vue.use 方法的时候就会调用组件的 install 方法，将 Vue 注入到组件中实现组件的全局注册
 const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
 }
 
 
-if(typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue)
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
 }
 
+//暴露 install 方法
 export default {
-    install,
-    colorPicker
+  install,
+  ColorPicker,
+  Button,
+  Alert
 }

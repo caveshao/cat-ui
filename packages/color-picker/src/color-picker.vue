@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: "color-picker",
+    name: "CaColorPicker",
     props: ["color"],
     data() {
       return {};

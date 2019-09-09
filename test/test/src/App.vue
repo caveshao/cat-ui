@@ -5,7 +5,17 @@
       src="./assets/logo.png"
     >
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <color-picker :color="color"></color-picker>
+    <ca-color-picker :color="color"></ca-color-picker>
+    <ca-button
+      type="primary"
+      size="medium"
+      round
+      disabled
+    ></ca-button>
+    <ca-alert
+      title="good"
+      type="success"
+    ></ca-alert>
   </div>
 </template>
 
@@ -17,10 +27,10 @@
     components: {
       HelloWorld
     },
-    data () {
+    data() {
       return {
-        color:"yellow"
-      }
+        color: "yellow"
+      };
     }
   };
 </script>
