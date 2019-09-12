@@ -2,13 +2,15 @@
 import ColorPicker from './color-picker'
 import Button from './button'
 import Alert from './alert'
+import Pagination from './pagination'
 
 
 //存储组件列表
 const components = [
   ColorPicker,
   Button,
-  Alert
+  Alert,
+  Pagination
 ]
 
 // Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器
@@ -28,5 +30,6 @@ export default {
   install,
   ColorPicker,
   Button,
-  Alert
+  Alert,
+  Pagination
 }
