@@ -5,7 +5,17 @@
   export default {
     name: "CaPagination",
     data() {
-      return {};
+      return {
+        currentPage: 1
+      };
+    },
+    methods: {
+      prePage() {},
+      nextPage() {},
+      changeCurrentPage(currentPage) {
+        this.currentPage = currentPage;
+        this.$emit("", this.currentPage);
+      }
     }
   };
 </script>
