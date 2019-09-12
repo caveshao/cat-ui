@@ -21,5 +21,8 @@ module.exports = {
       .tap(options => {
         return options
       })
+  },
+  css: {
+    extract: false
   }
 }
