@@ -1,5 +1,5 @@
 <template>
-  <div id="ca-pagination"></div>
+  <div id="ca-pagination">pag</div>
 </template>
 <script>
   export default {

@@ -23,6 +23,7 @@
       title="成功"
       type="success"
     ></ca-alert>
+    <ca-pagination></ca-pagination>
   </div>
 </template>
 
