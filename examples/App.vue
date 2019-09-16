@@ -13,16 +13,34 @@
         round
       >主要按钮</el-button>
     </el-row>
-    <ca-button
-      :type="pri"
-      size="small"
-      round
-      disabled
-    >123</ca-button>
+    <ca-button-group>
+      <ca-button
+        :type="pri"
+        @click="handleClick"
+        size="success"
+        round
+        plain
+      >123此处的文字必须有相应的插槽才能显示</ca-button>
+
+      <ca-button
+        :type="pri"
+        @click="handleClick"
+        size="primary"
+        round
+        plain
+      ></ca-button>
+    </ca-button-group>
+
     <ca-alert
       title="成功"
       type="success"
+      @close="handleClose"
+      description="测试辅助文字"
+      close-text="i know"
+      :closable="true"
+      center
     ></ca-alert>
+
     <ca-pagination></ca-pagination>
   </div>
 </template>
@@ -40,6 +58,14 @@
         color: "yellow",
         pri: "primary"
       };
+    },
+    methods: {
+      handleClick() {
+        console.log("success");
+      },
+      handleClose() {
+        console.log("close");
+      }
     }
   };
 </script>

@@ -8,12 +8,25 @@
     >
       <div class="ca-alert__content">
         <span
-          class="el-alert__title"
+          class="ca-alert__title"
           :class="[isBoldTitle]"
           v-if="title || $slots.title"
         >
           <slot name="title">{{title}}</slot>
         </span>
+        <p
+          class="ca-alert__description"
+          v-if="description && !$slots.default"
+        >{{ description }}</p>
+        <i
+          class="ca-alert_clostbtn"
+          :class="{
+          'is-customed':closeText !== '',
+          'ca-icon-close':closeText === ''
+          }"
+          v-show="closable"
+          @click="close()"
+        >{{closeText}}</i>
       </div>
     </div>
   </transition>
@@ -50,31 +63,48 @@
         validator: function(value) {
           return ["light", "dark"].indexOf(value) !== -1;
         }
-      },
-      data() {
-        return {
-          visible: true
-        };
-      },
-      methods: {
-        close() {
-          this.visible = false;
-          this.$emit("close");
-        }
+      }
+    },
+    data() {
+      return {
+        visible: true
+      };
+    },
+    methods: {
+      close() {
+        this.visible = false;
+        this.$emit("close");
+      }
+    },
+    computed: {
+      typeClass() {
+        return `ca-alert--${this.type}`;
       }
     }
   };
 </script>
 <style scoped>
+  .ca-alert {
+    text-align: left;
+  }
+
+  .is-center {
+    text-align: center;
+  }
+
   .ca-alert--success {
-    color: red;
+    color: blue;
   }
 
   .ca-alert--info {
     color: black;
   }
 
-  .ca-alert--waring {
+  .ca-alert--warning {
     color: orangered;
+  }
+
+  .ca-alert--error {
+    color: red;
   }
 </style>

@@ -1,6 +1,7 @@
 // 导入颜色选择器组件
 import ColorPicker from './color-picker'
 import Button from './button'
+import ButtonGroup from './button-group'
 import Alert from './alert'
 import Pagination from './pagination'
 
@@ -9,6 +10,7 @@ import Pagination from './pagination'
 const components = [
   ColorPicker,
   Button,
+  ButtonGroup,
   Alert,
   Pagination
 ]
