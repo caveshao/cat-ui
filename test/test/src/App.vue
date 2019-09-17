@@ -7,10 +7,10 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <ca-color-picker :color="color"></ca-color-picker>
     <ca-button
-      type="primary"
+      type="success"
       size="medium"
       round
-      disabled
+      plain
     ></ca-button>
     <ca-alert
       title="good"

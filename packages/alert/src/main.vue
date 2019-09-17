@@ -12,7 +12,8 @@
           :class="[isBoldTitle]"
           v-if="title || $slots.title"
         >
-          <slot name="title">{{title}}</slot>
+          <!-- 此处是具名插槽 -->
+          <slot name="title" v-bind:user="visible">{{title}}</slot>
         </span>
         <p
           class="ca-alert__description"
@@ -73,6 +74,7 @@
     methods: {
       close() {
         this.visible = false;
+        console.log(this.$slots);
         this.$emit("close");
       }
     },

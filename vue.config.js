@@ -1,4 +1,6 @@
 module.exports = {
+  lintOnSave: false,
+  // 关闭 eslint 规范
   pages: {
     index: {
       // page 的入口

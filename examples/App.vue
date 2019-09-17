@@ -39,7 +39,11 @@
       close-text="i know"
       :closable="true"
       center
-    ></ca-alert>
+    >
+      <template v-slot:title="slotProps">
+        suc {{slotProps.user}}
+      </template>
+    </ca-alert>
 
     <ca-pagination></ca-pagination>
   </div>
@@ -56,7 +60,8 @@
     data() {
       return {
         color: "yellow",
-        pri: "primary"
+        pri: "primary",
+        user: "tesst"
       };
     },
     methods: {
