@@ -45,7 +45,13 @@
       </template>
     </ca-alert>
 
-    <ca-pagination></ca-pagination>
+    <ca-pagination
+      :current-page="2"
+      :page-size="3"
+      :total="55"
+      :show-page-count="10"
+      @changeCurrentPage="handleClick"
+    ></ca-pagination>
   </div>
 </template>
 

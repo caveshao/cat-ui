@@ -1,6 +1,6 @@
 {
   "name": "@caveshao/cat-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Vue.js 2.0 UI UI组件库",
   "main": "lib/cat-ui.umd.min.js",
   "keywords": [
