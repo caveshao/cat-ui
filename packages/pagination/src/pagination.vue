@@ -12,7 +12,8 @@
         :key="i"
       >{{i}}</button>
     </template>
-    <template v-else-if="currentPage < 4">
+    <!-- 取要显示页面按钮数的一半作为比较标准 -->
+    <template v-else-if="currentPage < Math.floor(showPageCount/2)">
       <button
         v-for="i in loopPageCount"
         @click="changeCurrentPage(i)"
@@ -22,7 +23,7 @@
       <button>...</button>
       <button @click="changeCurrentPage(pageCount)">{{pageCount}}</button>
     </template>
-    <template v-else-if="currentPage>pageCount - 4">
+    <template v-else-if="currentPage>pageCount - Math.floor(showPageCount/2)">
       <button @click="changeCurrentPage(1)">1</button>
       <button>...</button>
       <button
@@ -36,11 +37,14 @@
     <template v-else>
       <button @click="changeCurrentPage(1)">1</button>
       <button>...</button>
-      <button @click="changeCurrentPage(currentPage - 2)">{{currentPage - 2}}</button>
-      <button @click="changeCurrentPage(currentPage - 1)">{{currentPage - 1}}</button>
-      <button class="active">{{currentPage}}</button>
-      <button @click="changeCurrentPage(currentPage + 1)">{{currentPage + 1}}</button>
-      <button @click="changeCurrentPage(currentPage + 2)">{{currentPage + 2}}</button>
+      <button
+        v-for="i in (showPageCount-4)"
+        :key="i"
+        :class="{active:(currentPage - Math.ceil((showPageCount-4) / 2) + i) === currentPage}"
+        @click="changeCurrentPage(currentPage - Math.ceil((showPageCount-4) / 2) + i)"
+      >
+        {{currentPage - Math.ceil((showPageCount-4) / 2) + i}}
+      </button>
       <button>...</button>
       <button @click="changeCurrentPage(pageCount)">{{pageCount}}</button>
     </template>

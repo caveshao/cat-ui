@@ -52,6 +52,8 @@
       :show-page-count="10"
       @changeCurrentPage="handleClick"
     ></ca-pagination>
+
+    <ca-radio></ca-radio>
   </div>
 </template>
 
