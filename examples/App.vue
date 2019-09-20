@@ -53,7 +53,18 @@
       @changeCurrentPage="handleClick"
     ></ca-pagination>
 
-    <ca-radio></ca-radio>
+    <ca-radio
+      :name="1"
+      v-model="radio"
+      label="选项一"
+    >选项1</ca-radio>
+    <ca-radio
+      :name="1"
+      v-model="radio"
+      label="选项二"
+    >选项2</ca-radio>
+
+    <ca-silder></ca-silder>
   </div>
 </template>
 
@@ -69,7 +80,8 @@
       return {
         color: "yellow",
         pri: "primary",
-        user: "tesst"
+        user: "tesst",
+        radio: "1"
       };
     },
     methods: {

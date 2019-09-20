@@ -5,6 +5,7 @@ import ButtonGroup from './button-group'
 import Alert from './alert'
 import Pagination from './pagination'
 import Radio from './radio'
+import Silder from './silder'
 
 
 //存储组件列表
@@ -14,7 +15,8 @@ const components = [
   ButtonGroup,
   Alert,
   Pagination,
-  Radio
+  Radio,
+  Silder
 ]
 
 // Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器
@@ -36,5 +38,6 @@ export default {
   Button,
   Alert,
   Pagination,
-  Radio
+  Radio,
+  Silder
 }
