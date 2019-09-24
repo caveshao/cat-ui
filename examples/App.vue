@@ -65,6 +65,7 @@
     >选项2</ca-radio>
 
     <ca-silder></ca-silder>
+    <ca-avatar></ca-avatar>
   </div>
 </template>
 
