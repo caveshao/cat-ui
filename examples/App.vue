@@ -53,19 +53,38 @@
       @changeCurrentPage="handleClick"
     ></ca-pagination>
 
-    <ca-radio
-      :name="1"
-      v-model="radio"
-      label="选项一"
-    >选项1</ca-radio>
-    <ca-radio
-      :name="1"
-      v-model="radio"
-      label="选项二"
-    >选项2</ca-radio>
+    <div>
+      <ca-radio
+        v-model="radio"
+        label="选项1"
+      >选项1</ca-radio>
+      <ca-radio
+        v-model="radio"
+        label="选项2"
+      >选项2</ca-radio>
+    </div>
 
     <ca-silder></ca-silder>
     <ca-avatar></ca-avatar>
+
+    <!-- <input
+      type="radio"
+      id="one"
+      value="One"
+      v-model="picked"
+    >
+    <label for="one">One</label>
+    <br>
+    <input
+      type="radio"
+      id="two"
+      value="Two"
+      v-model="picked"
+    >
+    <label for="two">Two</label>
+    <br>
+    <span>Picked: {{ picked }}</span> -->
+
   </div>
 </template>
 
@@ -82,7 +101,8 @@
         color: "yellow",
         pri: "primary",
         user: "tesst",
-        radio: "1"
+        radio: "",
+        picked: ""
       };
     },
     methods: {
