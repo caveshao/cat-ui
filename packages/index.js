@@ -7,6 +7,7 @@ import Pagination from './pagination'
 import Radio from './radio'
 import Silder from './silder'
 import Avatar from './avatar'
+import Input from './input'
 
 
 //存储组件列表
@@ -18,7 +19,8 @@ const components = [
   Pagination,
   Radio,
   Silder,
-  Avatar
+  Avatar,
+  Input
 ]
 
 // Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器
@@ -42,5 +44,6 @@ export default {
   Pagination,
   Radio,
   Silder,
-  Avatar
+  Avatar,
+  Input
 }

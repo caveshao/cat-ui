@@ -14,13 +14,11 @@ module.exports = {
   // 添加自定义 webpack 配置
   chainWebpack: config => {
     config.module
-      .rule('js')
-      .include
-      .add('/packages')
-      .end()
-      .use('babel')
-      .loader('babel-loader')
+    .rule('vue')
+    .use('vue-loader')
+      .loader('vue-loader')
       .tap(options => {
+        // 修改它的选项...
         return options
       })
   },
