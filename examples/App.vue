@@ -65,7 +65,7 @@
     </div>
 
     <ca-input></ca-input>
-    <ca-silder></ca-silder>
+    <ca-slider></ca-slider>
     <ca-avatar
       shape="square"
       :size="30"

@@ -5,7 +5,7 @@ import ButtonGroup from './button-group'
 import Alert from './alert'
 import Pagination from './pagination'
 import Radio from './radio'
-import Silder from './silder'
+import Slider from './slider'
 import Avatar from './avatar'
 import Input from './input'
 
@@ -18,7 +18,7 @@ const components = [
   Alert,
   Pagination,
   Radio,
-  Silder,
+  Slider,
   Avatar,
   Input
 ]
@@ -43,7 +43,7 @@ export default {
   Alert,
   Pagination,
   Radio,
-  Silder,
+  Slider,
   Avatar,
   Input
 }
