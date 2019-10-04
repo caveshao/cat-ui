@@ -82,7 +82,11 @@
       };
     },
     watch: {},
-    methods: {}
+    methods: {
+      valueChanged() {
+        
+      }
+    }
   };
 </script>
 <style scoped>

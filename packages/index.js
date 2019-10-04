@@ -8,6 +8,7 @@ import Radio from './radio'
 import Slider from './slider'
 import Avatar from './avatar'
 import Input from './input'
+import Menu from './menu'
 
 
 //存储组件列表
@@ -20,7 +21,8 @@ const components = [
   Radio,
   Slider,
   Avatar,
-  Input
+  Input,
+  Menu
 ]
 
 // Vue.js 的插件应该暴露一个 install 方法。这个方法的第一个参数是 Vue 构造器
@@ -45,5 +47,6 @@ export default {
   Radio,
   Slider,
   Avatar,
-  Input
+  Input,
+  Menu
 }
