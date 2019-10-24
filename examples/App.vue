@@ -90,13 +90,13 @@
         color: "yellow",
         pri: "primary",
         user: "tesst",
-        radio: "",
+        radio: "选项1",
         picked: ""
       };
     },
     methods: {
       handleClick() {
-        console.log("success");
+        console.log(this.$children[4].$options.name);
       },
       handleClose() {
         console.log("close");

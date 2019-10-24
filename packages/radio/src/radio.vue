@@ -31,6 +31,14 @@
       <slot></slot>
     </span>
   </label>
+  <!--
+对于这个组件的解读，有以下几个方面：
+1. v-model 后的值与 value 是双向绑定的，而此处 value 的值是已经确定的，所以如果 v-model 后的 model 如果与 value 的值一样
+radio 就会是选中状态。
+2. 如果有多个这样的子组件，一个父组件包含它们。在点击另一个子组件时会触发 Vue 的 change 事件，change 事件会改变 model。也就是说
+在点击另一个子组件后，会触发另一个子组件 model 的改变，进而改变父组件 data 中的值。
+
+  -->
 </template>
 <script>
   export default {
