@@ -1,6 +1,9 @@
 <template>
   <div class="ca-slider">
     slider
+    <button class="silder-button" ref="button1">button</button>
+
+    <button class="silder-button" ref="button2"></button>
   </div>
 </template>
 <script>
@@ -83,11 +86,41 @@
     },
     watch: {},
     methods: {
-      valueChanged() {
-        
-      }
+      valueChanged() {}
     }
   };
 </script>
-<style scoped>
+<style lang="scss">
+
+  @import "global";
+
+  $silder_color: #519eff;
+
+  $silder-border: 1px solid $silder-color;
+
+  @mixin rounded-corners($percentage:25%) {
+    -moz-border-radius:$percentage;
+    -webkit-border-radius:$percentage;
+    border-radius: $percentage;
+  }
+
+  .ca-slider {
+    @import "globalTest";
+    > .silder-button {
+      $width: 30px;
+      $height: 30px;
+      width: $width;
+      height: $height;
+      margin: {
+        left: 10px;
+        right: 10px;
+      }
+      background-color: $silder-color;
+      &:hover {
+        background-color: $global-color;
+      }
+      border: $silder-border;
+      @include rounded-corners($percentage:30%);//此处为静默注释，混合器使用
+    }
+  }
 </style>

@@ -90,7 +90,7 @@
         color: "yellow",
         pri: "primary",
         user: "tesst",
-        radio: "选项1",
+        radio: "",
         picked: ""
       };
     },
